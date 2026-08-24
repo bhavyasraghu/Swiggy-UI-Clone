@@ -146,7 +146,7 @@ src/
 ├── App.tsx
 ├── main.tsx
 └── index.css
-````
+```
 
 ## 🧠 Key Implementation Details
 
@@ -154,15 +154,15 @@ src/
 
 The interface is divided into reusable components for elements such as:
 
-* Restaurant cards
-* Restaurant grids
-* Menu items
-* Cart items
-* Offer cards
-* Search components
-* FAQ accordions
-* Sign-in drawer
-* Help sidebar
+- Restaurant cards
+- Restaurant grids
+- Menu items
+- Cart items
+- Offer cards
+- Search components
+- FAQ accordions
+- Sign-in drawer
+- Help sidebar
 
 This keeps the UI modular and makes individual sections easier to maintain and reuse.
 
@@ -170,32 +170,32 @@ This keeps the UI modular and makes individual sections easier to maintain and r
 
 The application uses the **React Context API** for shared application state.
 
-* `CartContext` manages cart items and cart operations.
-* `UIContext` manages shared UI state such as the sign-in drawer.
+- `CartContext` manages cart items and cart operations.
+- `UIContext` manages shared UI state such as the sign-in drawer.
 
 Custom hooks provide convenient access to these contexts:
 
-* `useCart`
-* `useUI`
+- `useCart`
+- `useUI`
 
 ### Routing
 
 React Router is used for client-side navigation between the application's main sections, including:
 
-* `/`
-* `/restaurant/:id`
-* `/search`
-* `/offers`
-* `/cart`
-* `/help`
+- `/`
+- `/restaurant/:id`
+- `/search`
+- `/offers`
+- `/cart`
+- `/help`
 
 ### Responsive Design
 
 The interface is designed to adapt across:
 
-* Desktop
-* Tablet
-* Mobile
+- Desktop
+- Tablet
+- Mobile
 
 Responsive styling is implemented using Tailwind CSS.
 
@@ -203,16 +203,16 @@ Responsive styling is implemented using Tailwind CSS.
 
 The project includes multiple interactive interfaces such as:
 
-* Restaurant discovery
-* Menu browsing
-* Search
-* Cart drawer
-* Full cart and checkout
-* Offers
-* Sign-in drawer
-* Help sidebar
-* FAQ accordion
-* Order confirmation
+- Restaurant discovery
+- Menu browsing
+- Search
+- Cart drawer
+- Full cart and checkout
+- Offers
+- Sign-in drawer
+- Help sidebar
+- FAQ accordion
+- Order confirmation
 
 ## ⚙️ Getting Started
 
@@ -260,7 +260,7 @@ Create a production build:
 npm run build
 ```
 
-Preview the production build locally:
+Preview the production build:
 
 ```bash
 npm run preview
