@@ -1,137 +1,256 @@
-# 🎯 UI ARENA — The UI Clone Challenge
+# Swiggy-Inspired Food Delivery UI
 
-**Clone. Code. Conquer.**
+A responsive food-delivery web application recreating the core user experience and visual patterns of Swiggy using **React, TypeScript, Tailwind CSS, and Vite**.
 
-A 12-hour solo frontend challenge by **FOSS Club, LBSITW** — recreate a mystery website's homepage, revealed live the moment the event starts.
+Built as part of the **UI Arena UI Clone Challenge**, with a focus on UI accuracy, reusable components, responsive design, and functional interactions.
 
-**Repository:** https://github.com/FOSSCLUB-LBSITW/UI-Arena-UI-Clone-Challenge
+## 🚀 Live Demo
 
----
+**[View Live Demo](https://ui-arena-ui-clone-challenge-lake.vercel.app/)**
 
 ## 📌 Overview
 
-UI ARENA is a 12-hour frontend development challenge where participants recreate the UI of a popular website. The target website stays confidential until the event begins, making it a surprise challenge for everyone.
+This project recreates a modern food-delivery platform interface with multiple pages and interactive UI elements.
 
-- 🗓️ **Date:** 8 August 2026
-- ⏰ **Time:** 9:00 AM – 9:00 PM
-- 💻 **Mode:** Online
-- 👤 **Participation:** Individual only
-- 🆓 **Entry:** 100% free, no registration fee
-- 📜 **Certificates:** Provided to all participants
+Rather than building only static screens, the application includes functional navigation, restaurant browsing, menu interactions, cart management, search, offers, help/support content, and a sign-in drawer.
 
-## 🎯 Objectives
+## ✨ Features
 
-- Improve participants' frontend development skills
-- Encourage problem-solving and attention to UI detail
-- Provide hands-on experience with Git and GitHub collaboration
+### 🏠 Home Page
 
-## ✅ Requirements
+* Food category browsing
+* Restaurant listings
+* Restaurant cards with ratings, cuisines, delivery information, and offers
+* Responsive layouts for different screen sizes
 
-- Home page matching the given UI
-- Responsive, clean interface
-- Proper folder structure and readable code
+### 🍽️ Restaurant & Menu
 
----
+* Restaurant-specific menu pages
+* Categorized menu sections
+* Expandable menu accordions
+* Add-to-cart functionality
+* Item customization modal
 
-## 🚀 How to Submit
+### 🛒 Cart
 
-Submission happens entirely through a GitHub Pull Request. Follow these steps in order.
+* Add and remove items
+* Increase/decrease item quantities
+* Automatic subtotal calculation
+* Bill summary
+* Checkout flow
+* Order confirmation screen
 
-### 1. Fork this repository
+### 🔎 Search
 
-Click **Fork** (top-right of this repo) to create your own copy under your GitHub account.
+* Search restaurants and dishes
+* Search results interface
+* Responsive search experience
 
-### 2. Clone your fork
+### 🎁 Offers
+
+* Restaurant offers
+* Coupons
+* Bank offers
+* Offer cards with reusable components
+
+### 👤 Sign-In Drawer
+
+* Right-side sign-in drawer
+* Reusable UI state management
+* Accessible from the application header
+
+### ❓ Help & Support
+
+* Help/support sidebar
+* FAQ accordion
+* Categorized support content
+
+## 🛠️ Tech Stack
+
+| Technology        | Purpose                                  |
+| ----------------- | ---------------------------------------- |
+| React             | UI development                           |
+| TypeScript        | Type-safe development                    |
+| Vite              | Development and production build tooling |
+| Tailwind CSS      | Responsive styling                       |
+| React Router      | Client-side routing                      |
+| React Context API | Global cart and UI state                 |
+| Lucide React      | Icons                                    |
+| ESLint/Oxlint     | Code quality                             |
+
+## 🧩 Architecture
+
+The application is organized around reusable components and route-level pages.
+
+```text
+src/
+├── components/
+│   ├── Header/
+│   ├── RestaurantCard/
+│   ├── RestaurantGrid/
+│   ├── MenuItem/
+│   ├── Cart/
+│   ├── CartDrawer/
+│   ├── OfferCard/
+│   ├── SearchBar/
+│   ├── SearchResults/
+│   ├── SignInDrawer/
+│   ├── FAQAccordion/
+│   └── ...
+│
+├── pages/
+│   ├── Home/
+│   ├── Restaurant/
+│   ├── Search/
+│   ├── Offers/
+│   ├── Cart/
+│   ├── Help/
+│   └── OrderConfirmed/
+│
+├── context/
+│   ├── CartContext.tsx
+│   └── UIContext.tsx
+│
+├── hooks/
+│   ├── useCart.ts
+│   └── useUI.ts
+│
+├── data/
+│   ├── restaurants.ts
+│   ├── menu.ts
+│   ├── categories.ts
+│   ├── offers.ts
+│   └── help.ts
+│
+├── types/
+├── utils/
+└── App.tsx
+```
+
+## 🧠 Key Implementation Details
+
+### Reusable Components
+
+The UI is broken into reusable components such as restaurant cards, menu items, offer cards, search components, cart components, and FAQ accordions.
+
+This keeps the interface consistent while making individual sections easier to maintain.
+
+### State Management
+
+The application uses the **React Context API** for shared state.
+
+* `CartContext` manages cart items and cart operations.
+* `UIContext` manages UI-level state such as the sign-in drawer.
+
+Custom hooks such as `useCart` and `useUI` provide convenient access to these contexts.
+
+### Routing
+
+React Router is used for client-side navigation between:
+
+* `/`
+* `/restaurant/:id`
+* `/search`
+* `/offers`
+* `/cart`
+* `/help`
+
+### Responsive Design
+
+The interface is designed to adapt across:
+
+* Desktop
+* Tablet
+* Mobile
+
+The layouts and reusable components use responsive styling to maintain usability across screen sizes.
+
+## 📸 Screenshots
+
+### Home Page
+
+*Add a screenshot of the home page here.*
+
+### Restaurant Page
+
+*Add a screenshot of the restaurant/menu page here.*
+
+### Cart
+
+*Add a screenshot of the cart here.*
+
+### Search
+
+*Add a screenshot of the search page here.*
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+Make sure you have **Node.js** and **npm** installed.
+
+### Installation
+
+Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/UI-Arena-UI-Clone-Challenge.git
+git clone https://github.com/bhavyasraghu/UI-Arena-UI-Clone-Challenge.git
+```
+
+Navigate into the project:
+
+```bash
 cd UI-Arena-UI-Clone-Challenge
 ```
 
-### 3. Create a branch (recommended)
+Install dependencies:
 
 ```bash
-git checkout -b my-submission
+npm install
 ```
 
-### 4. Build the UI
-
-Recreate the homepage revealed at kick-off, using any frontend framework or plain HTML/CSS/JS — your choice.
-
-### 5. Commit your work
-
-Commit in small, frequent stages as you build — not one giant commit at the end.
+Start the development server:
 
 ```bash
-git add .
-git commit -m "Add homepage layout and navbar"
+npm run dev
 ```
 
-### 6. Push to your fork
+Open the local URL displayed by Vite, typically:
+
+```text
+http://localhost:5173
+```
+
+## 📦 Production Build
+
+Create a production build:
 
 ```bash
-git push origin my-submission
+npm run build
 ```
 
-### 7. Open a Pull Request
+Preview the production build locally:
 
-- Go to your fork on GitHub — you'll usually see a **"Compare & pull request"** banner. Click it.
-- If not, go to **Pull Requests → New Pull Request**.
-- Confirm the base repository is `FOSSCLUB-LBSITW/ui-arena` and the compare branch is yours.
-- Give it a clear title (your name or username) and a short description of your approach.
-- Click **Create Pull Request**.
+```bash
+npm run preview
+```
 
-Your Pull Request **is** your submission. Only PRs opened within the event window (9:00 AM – 9:00 PM, 8 Aug 2026) will be considered — don't leave this for the last minute.
+## 🚀 Deployment
 
-### Quick command reference
+The project is deployed using **Vercel**.
 
-| Step | Command |
-|---|---|
-| Clone | `git clone <your-fork-url>` |
-| Check status | `git status` |
-| Create branch | `git checkout -b <branch-name>` |
-| Stage changes | `git add .` |
-| Commit | `git commit -m "message"` |
-| Push | `git push origin <branch-name>` |
-| Pull latest | `git pull` |
+A GitHub Pages deployment workflow is also included in the repository through GitHub Actions.
 
-New to Git? A Git guide attached to this repo [`UI_ARENA_Git_Guide.pdf`](./UI_ARENA_Git_Guide.pdf) covers it step by step with instructions.
+## 📊 Project Status
 
----
+**Completed**
 
-## 🏆 Judging Criteria
+This project was created as a submission for the UI Arena UI Clone Challenge. The challenge has now concluded, and the repository is maintained as a portfolio project demonstrating frontend development and UI implementation skills.
 
-| Criteria | Weightage |
-|---|---|
-| UI accuracy & resemblance | 40% |
-| Code quality & structure | 20% |
-| Responsiveness | 20% |
-| Overall UX & design consistency | 20% |
+## ⚠️ Disclaimer
 
-## 🚫 Rules
+This is an **independent educational project inspired by the Swiggy user interface**.
 
-- Work must be completed **individually**.
-- The target site may only be referenced **after** the challenge is announced.
-- AI screenshot-to-code tools and previewing/prepping the target site before reveal are **not allowed**.
-- Plagiarism or copying another participant's work results in disqualification.
-- Only Pull Requests opened **within the event window** will be considered.
-- Organizers reserve the right to update rules if needed.
+It is not affiliated with, endorsed by, or officially connected to Swiggy.
 
-## 📞 Event Coordinators
-
-| Name | Contact |
-|---|---|
-| Minnu Lekha V G | +91 91882 26165 |
-| Shreya Ajith | +91 82899 57074 |
-
-
-## 🔗 Links
-
-- **Email:** [fossclub@lbsitw.ac.in](mailto:fossclub@lbsitw.ac.in)
-- **LinkedIn:** [@FOSS Club Lbsitw](https://www.linkedin.com/company/foss-club-lbsitw)
-- **Instagram:** [@foss_club_lbsitw](https://instagram.com/foss_club_lbsitw)
-- **GitHub:** [FOSSCLUB-LBSITW](https://github.com/FOSSCLUB-LBSITW)
-  
----
-
-<p align="center">Organized with 💚 by <b>FOSS Club, LBSITW</b></p>
+The project uses mock/local data and does not implement Swiggy's backend, authentication system, payment processing, or production APIs.
