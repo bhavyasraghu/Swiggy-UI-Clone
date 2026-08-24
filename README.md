@@ -165,24 +165,6 @@ The interface is designed to adapt across:
 
 The layouts and reusable components use responsive styling to maintain usability across screen sizes.
 
-## 📸 Screenshots
-
-### Home Page
-
-*Add a screenshot of the home page here.*
-
-### Restaurant Page
-
-*Add a screenshot of the restaurant/menu page here.*
-
-### Cart
-
-*Add a screenshot of the cart here.*
-
-### Search
-
-*Add a screenshot of the search page here.*
-
 ## ⚙️ Getting Started
 
 ### Prerequisites
